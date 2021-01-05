@@ -1,0 +1,92 @@
+//- index.pug
+doctype html
+html
+    head
+        title Nritya Academy
+        style
+            include ../static/style.css
+
+    body
+
+        //- navigation bar section
+        nav#navbar.navbar
+            ul
+                li #[a(href='/') Home]
+                li #[a(href='/') About Us]
+                li #[a(href='/') Services]
+                li #[a(href='/') Events]
+                li #[a(href='/') Contact Us]
+
+        //- home section
+        section#intro.intro
+            section#intro-inside
+                div Welcome to Nritya Academy.
+                div#small Dance is art in motion.
+
+        //- about section
+        section#about.about
+            div#aboutpara.aboutpara
+                p Nritya Academy was founded on 30th of June 1999 by Shri XYZ with a vision of providing quality dance education at affordable prices in Jamshedpur.
+                p Today, Nritya Academy is one of the better known names for high quality dance education, has oganised various national events.
+                p The academy also provides oppurtunities like Masterclass and Workshops.
+
+            div#aboutimage.aboutimage
+                img#aboutimage-inside.aboutimage-inside(src= '/static/aboutimage.jpg' alt= 'Nritya Academy Dance-Room Image')
+
+        //- service section
+        section#service.service
+            section
+                h2#service-head We Teach
+                div#dance-list.dance-list
+                    div#traditional.traditional
+                        
+                        ul#traditional-li.traditional-li
+                            li Bharatnatyam
+                            li Kathak
+                            li Kathakali
+                            li Manipuri                  
+                            li Kuchipudi
+                            li Odissi
+
+                    div#western.western
+                        
+                        ul#western-li.western-li
+                            li Jazz
+                            li Ballet
+                            li Hip-Hop
+                            li Contemporary
+                            li Ballroom
+                    
+        //- event section
+        section#event.event
+            div#event-list.event-list
+                h4 Our Upcoming Events
+                ul 
+                    li  #[a(href='/') ]
+                    li  #[a(href='/') ]
+                    li  #[a(href='/') ]
+                    li  #[a(href='/') ]
+                    li  #[a(href='/') ]
+                    li  #[a(href='/') ]                    
+                    li  #[a(href='/') ]
+
+        //- contact section
+        section#contact.contact
+            div#logo.logo
+                img(src="/static/website-logo.png" alt="Nritya Academy Logo")
+            div#contact-site.contact-site
+                ul
+                    li #[a(href='/') mail]
+                    li #[a(href='/') facebook]
+                    li #[a(href='/') insta]
+                    li #[a(href='/') phn]
+                    li #[a(href='/') Write to Us]
+            div#address.address
+                p 145, Baridih,Jamshedpur
+                p Jharkhand-800117
+
+        //- footer section
+        section#footer.footer
+            p Copyright Nritya Academy | All rights reserved
+    script
+        include ../static/index.js

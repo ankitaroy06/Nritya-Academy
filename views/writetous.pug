@@ -1,0 +1,32 @@
+extends base.pug
+
+block scripts
+    script(src= "/static/index.js")
+
+block style
+    style 
+        include ../static/writetousStyle.css
+        include ../static/style.css
+
+block content
+    section#writeto.writeto
+        div#header.header
+            p#main-header.main-header Write To Us:
+            p#secnd-header.secnd-header (Feedback or Queries)
+        div#form.form
+            form(action='/contact' method='post' class='write-form')
+                p
+                |  Name:
+                input(type='text', name='name', class='write-input' value='', placeholder='Eg: John Smith' required)
+                p
+                |  Email Id:
+                input(type='email', name='mail', class='write-input' value='', placeholder='Eg: John123@gmail.com' required)
+                p
+                |  Contact No.:
+                input(type='phone', name='phn', class='write-input' value='', placeholder='Eg: 1234567890' required) 
+                p
+                |  Your Text:
+                input(type='text', name='message', class='write-input' value='', placeholder='Write here...' required)
+                p
+                button
+                input(type='submit', value='Submit', class='submit-button')

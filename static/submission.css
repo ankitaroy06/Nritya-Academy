@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100;300&display=swap');
+
+:root{
+    --fontforhead: 'Courgette', cursive;
+    --fontforbody: 'Texturina', serif;
+    --lightbackgroundcolor: #ffb4d147;
+    --darkfontcolor:  #FF0063;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--lightbackgroundcolor);
+    color: var(--darkfontcolor);
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontforbody);
+    width: 100%;
+    height: 100vh;
+}
