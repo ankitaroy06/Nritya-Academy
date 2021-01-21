@@ -3,18 +3,34 @@ html
   head
     title Nritya Academy
     block scripts
-    block style
+      //- adding js file
+      //script(src="../static/script.js")
+      //- when hamburger icon
+      script(src= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")    block style
 
+    block style
+      style 
+        include ../static/style.css
+
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    
   body
+
+    //- default message
+    div#default.default This Website is not Compatible with your Device.
+
     //- navigation bar section
     nav#navbar.navbar
-        ul
-            li #[a(href='/') Home]
-            li #[a(href='#about') About Us]
-            li #[a(href='#service') Services]
-            li #[a(href='#event') Events]
-            li #[a(href='#contact') Contact Us]
-            
+        div#hamburger-menu.hamburger-menu
+          i#menu-icon.fa.fa-bars
+
+        ul#list.list
+          li #[a(href='/') Home]
+          li #[a(href='#about') About Us]
+          li #[a(href='#service') Services]
+          li #[a(href='#event') Events]
+          li #[a(href='#contact') Contact Us]
+
         //- button#loginButton.loginButton #[a(href= '/login') Login]
 
     block content

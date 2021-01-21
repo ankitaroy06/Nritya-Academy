@@ -8,6 +8,7 @@
     --lightbackgroundcolor: #ffb4d147;
     --darkfontcolor:  #FF0063;
     --lightfontcolor: #FC4C90;
+    --navbar-bg-color: #ffb4d1;
 }
 *{
     padding: 0;
@@ -18,13 +19,18 @@ html{
     scroll-behavior: smooth;
 }
 
+.default{
+    display: none;
+}
+
 .navbar{
     position: sticky;
     top: 0;
-    background-color: #FFB4D1;
+    background-color: var(--navbar-bg-color);
     width: 100%;
     height: 9vh;
     font-family: var(--fontforbody);
+    display: flex;
 }
 .navbar ul{
     display: flex;
@@ -44,7 +50,12 @@ html{
 .navbar ul li a:hover{
     color: var(--lightfontcolor);
 }
-.loginButton a{
+
+.hamburger-menu{
+    display: none;
+}
+
+/*.loginButton a{
     width: 100px;
     height: 35px;
     color: var(--darkfontcolor);
@@ -71,7 +82,7 @@ html{
     color: var(--darkfontcolor);
     box-shadow: none;
     background-color: rgb(255, 224, 234);
-}
+}*/
 
 .intro{
     background: url('/static/home-bg.jpg') no-repeat center center/cover;
@@ -268,4 +279,102 @@ html{
     background-color: black;
     color: whitesmoke;
     font-size: .7rem;
+}
+
+@media only screen and (max-width: 915px) and (min-width: 200px){
+    .navbar ul{
+        display: none;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        background-color: var(--navbar-bg-color);
+        transition: 10s;
+        transition-timing-function: ease-in-out;
+    }
+    .hamburger-menu{
+        display: block;
+        height: 9vh;
+        box-sizing: border-box;
+        background-color: var(--lightbackgroundcolor);
+        width: 100%;
+        
+    }
+    #menu-icon{
+        width: 35px;
+        height: 35px;
+        color: var(--darkfontcolor);
+        font-size: 30px;
+        margin-left: 3%;
+        margin-top: 2vh;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 690px) and (min-width: 360px){
+    body, #small, .traditional, .western{
+        font-size: 0.7rem;
+    }
+    #intro-inside{
+        font-size: 1.5rem !important;
+        text-align: center;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .aboutpara{
+        height: 40vh;
+        width: 70%;
+        font-size: .65rem !important;
+    }
+    .aboutimage, .aboutimage-inside{
+        width: 50%;
+        height: 40vh;
+    }
+    .event h4{
+        font-size: 1rem;
+    }
+    .footer{
+        font-size: .6rem;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .contact-site ul li i{
+        width: 20px;
+    }
+}
+
+@media only screen and (max-width: 359px){
+    body{
+        font-size: 1rem;
+        background-color: var(--navbar-bg-color);
+        color: var(--darkfontcolor);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--fontforbody);
+    }
+    .default{
+        display: flex;
+        width: 80%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar, .intro, .about, .service, .event, .contact{
+        display: none;
+    }
+    .footer{
+        font-size: .5rem;
+        height: 10vh;
+        margin-top: auto;
+    }
 }

@@ -6,11 +6,17 @@ html
         style
             include ../static/style.css
 
+        script
+            include ../static/script.js
+
     body
 
         //- navigation bar section
         nav#navbar.navbar
-            ul
+            div#hamburger-menu.hamburger-menu
+                i#icon.fa.fa-bars
+
+            ul#list.list
                 li #[a(href='/') Home]
                 li #[a(href='/') About Us]
                 li #[a(href='/') Services]
@@ -88,5 +94,4 @@ html
         //- footer section
         section#footer.footer
             p Copyright Nritya Academy | All rights reserved
-    script
-        include ../static/index.js
+    
