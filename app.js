@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 //saving data into mongodb using express
 const bodyparser = require('body-parser');
 var mongoose = require('mongoose');
