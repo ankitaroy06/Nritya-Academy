@@ -284,7 +284,8 @@ html{
 @media only screen and (max-width: 915px) and (min-width: 200px){
     .navbar ul{
         display: none;
-        height: 100vh;
+        height: 80vh;
+        border-bottom-left-radius: 80%;
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -300,7 +301,6 @@ html{
         box-sizing: border-box;
         background-color: var(--lightbackgroundcolor);
         width: 100%;
-        
     }
     #menu-icon{
         width: 35px;

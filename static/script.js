@@ -1,8 +1,11 @@
 window.onload=function(){
 
+    var menuForHamburger = 0;
+
     function menuList(){
         console.log("hello");    
         if(navMenu.style.display == "none"){
+            menuForHamburger = 1;
             navMenu.style.display = "flex";
         }
         else{
@@ -11,8 +14,8 @@ window.onload=function(){
     }
 
     function menuDisappear(){
-        console.log("hello again");
-        navMenu.style.display = "none";
+        if(menuForHamburger == 1)
+            navMenu.style.display = "none";
     }
 
     const burger = document.getElementById("menu-icon");
