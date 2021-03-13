@@ -5,9 +5,10 @@ const port = process.env.PORT || 8000;
 //saving data into mongodb using express
 const bodyparser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/forms', {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://nritya-academy_ankita:ankita9mongodbatlas@cluster0.j8zok.mongodb.net/forms', {useNewUrlParser: true, useUnifiedTopology: true });
+// for local connection : mongodb://localhost/forms
 
-//defining schema
+//defining schema 
 const formSchema = new mongoose.Schema({
     name: String,
     mailid: String,
